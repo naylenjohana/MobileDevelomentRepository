@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!--<div *ngIf="selected"><-->
+  <hr />
+  <label>Name: </label><br />
+  <input [(ngModel)]="teacher.name" placeholder="name"><br />
+  <label>Description: </label><br />
+  <textarea [(ngModel)]="teacher.id" placeholder="description"></textarea><br />
+  <label>Type: </label><br />
+  <input [(ngModel)]="teacher.name" placeholder="tipo"><br />
+  <ul>
+  <li *ngFor="let clase of teacher.classes">     
+    <span>class: </span> {{clase}}
+  </li>
+</ul>
+</div>
+
