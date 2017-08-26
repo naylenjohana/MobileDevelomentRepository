@@ -1,0 +1,32 @@
+<hr />
+<div>
+<ul>
+  <li *ngFor="let vehicle of vehicles" 
+      (click)="onSelect(vehicle)">  
+    <h3> {{vehicle.model}}</h3>
+  </li>
+</ul> 
+<hr />
+</div>
+<div *ngIf="selected">
+    <hr />
+    <span>model: </span> {{selected.model}}<br/>
+    <span>color: </span> {{selected.color}}<br/>
+    <span>plate: </span> {{selected.plate}}<br/>
+    <span>capacity: </span> {{selected.capacity}}<br/>
+    <span>buildYear: </span> {{selected.buildYear}}<br/>
+    <hr />
+</div>
+<div>
+  <label>Driver</label>
+    <hr />
+    <span>ID: </span> {{driver.id}}<br/>
+    <span>LICENSE: </span> {{driver.license}}<br/>
+    <span>FIRST NAME: </span> {{driver.firstName}}<br/>
+    <span>LAST NAME: </span> {{driver.lastName}}<br/>
+    <span>AGE: </span> {{driver.age}}<br/>
+  
+</div>
+
+
+
