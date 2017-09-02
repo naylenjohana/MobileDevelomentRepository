@@ -6,7 +6,6 @@ import {InMemoryWebApiModule} from "angular2-in-memory-web-api";
 import { InMemoryProductService } from './mock/in-memory-product.service';
 import { AppComponent } from './app.component';
 import { ProductService } from './service/product.service';
-
 import { DetailComponent } from './pages/detail/detail.component';
 
 @NgModule({
@@ -20,8 +19,7 @@ import { DetailComponent } from './pages/detail/detail.component';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryProductService)
   ],
-  providers: [ProductService,InMemoryWebApiModule],
+  providers: [ProductService, InMemoryProductService],
   bootstrap: [AppComponent]
-
 })
 export class AppModule { }
