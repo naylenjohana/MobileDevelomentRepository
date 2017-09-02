@@ -1,0 +1,11 @@
+<div>
+  <hr/>
+  <h2>Student</h2>
+<ul>
+  <li *ngFor="let student of students"
+      (click)="onSelect(student)">
+    <span>{{student.name + ' ' + student.lastName}}</span> 
+  </li>
+</ul>
+<!--<student-detail [student]="selected"></student-detail>-->
+</div>
