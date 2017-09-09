@@ -6,8 +6,9 @@ import {InMemoryWebApiModule} from "angular2-in-memory-web-api";
 import { InMemoryProductService } from './mock/in-memory-product.service';
 import { AppComponent } from './app.component';
 import { ProductService } from './service/product.service';
-import { DetailComponent } from './detail/detail/detail.component';
+import { DetailComponent } from './detail/detail/detail.component'; 
 import { StudentComponent } from './student/student.component';
+import {AppRoutingModule} from "./app.routing";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { StudentComponent } from './student/student.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryProductService)
+    InMemoryWebApiModule.forRoot(InMemoryProductService),
+    AppRoutingModule
   ],
   providers: [ProductService, InMemoryProductService],
   bootstrap: [AppComponent]

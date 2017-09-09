@@ -20,7 +20,11 @@ export class AppComponent {
   }
 
   getProducts() {
-    this.productService.getProducts().then(products => this.products = products);
+    this.productService.getProducts()
+      .subscribe(products=>{this.products=products;this.selected=null;})
+    ,error=>{
+        console.log(error)
+      }
   }
 
   ngOnInit(): void {
@@ -35,10 +39,15 @@ export class AppComponent {
     name = name.trim();
     if (!name) { return; }
     this.productService.create(name)
-      .then(product => {
+      .subscribe(product => {
         this.products.push(product);
-        this.selected = null;
-      })
-      .catch(error => console.error(error));
+        
+      }),
+      error => {
+          console.error(error)
+        };
   }
+
+ 
+
 }
