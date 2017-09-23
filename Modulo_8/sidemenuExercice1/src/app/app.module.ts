@@ -5,20 +5,19 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import  {TabsPage} from '../pages/tabs/tabs';
+import {TeachersPage} from '../pages/teachers/teachers';
+import{StudentsPage} from '../pages/students/students';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {TabPadrePage} from '../pages/tab-padre/tab-padre';
-import {Tab1Page} from '../pages/tab1/tab1';
-import {Tab2Page} from '../pages/tab2/tab2';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    TabsPage,
-    TabPadrePage
+    StudentsPage,
+    TeachersPage
   ],
   imports: [
     BrowserModule,
@@ -29,8 +28,8 @@ import {Tab2Page} from '../pages/tab2/tab2';
     MyApp,
     HomePage,
     ListPage,
-    TabsPage,
-    TabPadrePage
+    StudentsPage,
+    TeachersPage
   ],
   providers: [
     StatusBar,

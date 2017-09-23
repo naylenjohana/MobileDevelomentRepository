@@ -1,31 +1,34 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Page1 } from '../pages/page1/page1';
+import { Page2 } from '../pages/page2/page2';
+import { Page3 } from '../pages/page3/page3';
+import { Page4 } from '../pages/page4/page4';
+import { Page5 } from '../pages/page5/page5';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { TabPadrePage } from '../pages/tab-padre/tab-padre';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = Page1;
 
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'MyTabs', component: TabPadrePage }
+      { title: 'ActionSheet', component: Page1 },
+      { title: 'Modal', component: Page2 },
+      { title: 'Alert', component: Page3 },
+      { title: 'Loading', component: Page4 },
+      { title: 'Scroll', component: Page5 }
     ];
-
   }
 
   initializeApp() {
