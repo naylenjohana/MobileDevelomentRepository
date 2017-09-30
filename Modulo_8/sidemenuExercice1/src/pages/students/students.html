@@ -1,18 +1,16 @@
-<!--
-  Generated template for the StudentsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>students</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Students</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of students" secondary (click)="presentStudentModal()">      
+      {{item.firstName}}      
+    </button>
+  </ion-list>  
 </ion-content>

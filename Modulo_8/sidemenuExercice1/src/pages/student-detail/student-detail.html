@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>student-detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>
+    <ion-item>
+      <ion-label color="primary">First Name</ion-label>
+      <ion-input placeholder="First name" [(ngModel)]="student.firstName" >First name</ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary">Last Name</ion-label>
+        <ion-input placeholder="Last name" [(ngModel)]="student.lastName">Last name</ion-input>
+      </ion-item>  
+      <button ion-button full (click)="SaveStudent()">save</button>
+</ion-list>
+</ion-content>
+

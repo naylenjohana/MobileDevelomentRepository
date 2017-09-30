@@ -7,9 +7,10 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {TeachersPage} from '../pages/teachers/teachers';
 import{StudentsPage} from '../pages/students/students';
-
+import{StudentDetailPage} from '../pages/student-detail/student-detail'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     StudentsPage,
-    TeachersPage
+    TeachersPage,
+    StudentDetailPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__my_form_db',
+         driverOrder: ['websql','indexeddb', 'sqlite']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,7 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     StudentsPage,
-    TeachersPage
+    TeachersPage,
+    StudentDetailPage
   ],
   providers: [
     StatusBar,
