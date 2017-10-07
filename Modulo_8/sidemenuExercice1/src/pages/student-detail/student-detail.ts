@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-
+import {Student} from '../../app/models/student';
 /**
  * Generated class for the StudentDetailPage page.
  *
@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class StudentDetailPage {
 
+  student:Student =new Student();
+  courses:Array<string>=["Math","Physics","English"];
   constructor(public viewCtrl: ViewController, public navParams: NavParams) {
   }
 

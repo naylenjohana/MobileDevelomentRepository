@@ -16,6 +16,20 @@
         <ion-label color="primary">Last Name</ion-label>
         <ion-input placeholder="Last name" [(ngModel)]="student.lastName">Last name</ion-input>
       </ion-item>  
+      <ion-item>
+          <ion-label color="primary">Nid</ion-label>
+          <ion-input placeholder="Nid" [(ngModel)]="student.nid">nid</ion-input>
+      </ion-item> 
+      <ion-list>
+          <ion-item>
+            <ion-label>Course</ion-label>
+            <ion-item [(ngModel)]="student.Courses" multiple="true" cancelText="Cancel" okText="Ok">
+              <ion-option *ngFor="let course of courses" value="course">{{course}}</ion-option>              
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+       
       <button ion-button full (click)="SaveStudent()">save</button>
 </ion-list>
 </ion-content>
